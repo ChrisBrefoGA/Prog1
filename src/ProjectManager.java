@@ -1,8 +1,8 @@
-import java.util.Scanner;
+import java.util.*;
 
 /**
   
- @author  
+ @author  Christopher Brefo & Thomas McNeil
  */
  
 public class ProjectManager
@@ -11,25 +11,28 @@ public class ProjectManager
    Team cs213;
    public void run()
    {
-       
       boolean done = false;
       while ( !done )
       {
-         String command = stdin.next();
+    	 System.out.println("What would you like to do? ((A)dd,(P)rint,(R)emove, or (Q)uit");
+    	 stdin= new Scanner(System.in);
+    	 String command = stdin.nextLine();
          switch(command.charAt(0))
          {   
             case 'A': add();
 		      break; 
-            case 'B'://not actually correct
+            case 'P': print();
             	break; 
-            case 'C'://not actually correct
+            case 'R': remove();
             	break;              
-            case 'D'://not actually correct
+            case 'Q':
+            		  done = true;
             	break;      
-            default: //deal with bad command here 
+            default: System.out.println("The command '"+command+"' is not supported.");
          }  
       }
-      //write java code before you terminate the program
+      print();
+      System.out.println("The Team is ready to go!");
    } //run()
    
    private void add()

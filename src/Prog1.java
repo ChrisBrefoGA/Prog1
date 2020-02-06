@@ -1,6 +1,6 @@
 /**
   
- @author  
+ @author  Christopher Brefo & Thomas McNeil
  */
 public class Prog1
 {
