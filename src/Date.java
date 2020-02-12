@@ -30,7 +30,48 @@ public class Date
    
    public boolean isValid()
    {
-	           return false;
+	   if(this.day < 1) {	
+		   return false;
+	   }
+	   
+	   switch (month) {
+       case Month.JAN: case Month.MAR: case Month.MAY:
+       case Month.JUL: case Month.AUG: case Month.OCT:
+       case Month.DEC:
+            if(this.day <= 31) {
+            	return true;
+            }
+            else {
+            	return false;
+            }
+       case Month.APR: case Month.JUN:
+       case Month.SEP: case Month.NOV:
+           if(this.day <= 30) {
+           	return true;
+           }
+           else {
+        	   return false;
+           }
+       case Month.FEB:
+           if (isLeapYear()) {
+               if(this.day <= 28) {
+            	   return true;
+               }
+               else {
+            	   return false;
+               }
+           }
+           else {
+               if(this.day <= 29) {
+            	   return true;
+               }
+               else {
+            	   return false;
+               }
+           }
+       default:
+           return false;	//if the month is not 1-12 return false
+	   }
    }
    
    @Override
@@ -45,6 +86,20 @@ public class Date
    {
        return false;
    }  
+   
+   private boolean isLeapYear(){
+	   if(this.year % 4 == 0 && this.year % 100 != 0) {
+		   return true;
+	   }
+	   if(this.year % 400 == 0) {
+		   return true;
+	   }
+	   return false;
+   }
+   
+   
+   
+   
 }
 
 

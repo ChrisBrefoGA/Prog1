@@ -8,9 +8,12 @@ import java.util.*;
 public class ProjectManager
 {
    Scanner stdin;
-   Team cs213;
+   Team cs213 = new Team();
+  
+   
    public void run()
    {
+	  System.out.println("Let's start a new team!");
       boolean done = false;
       while ( !done )
       {
@@ -50,6 +53,12 @@ public class ProjectManager
    
    private void print()
    {
-      //must check if the team has 0 members. 
+	  if(cs213.isEmpty()) { //check if the team has 0 members. 
+		  System.out.println("We have 0 team members!");
+	  }
+	  else {
+		  System.out.println("We have the following team members:");
+		  cs213.print();  //prints team members
+	  }
    }   
 } //ProjectManager
