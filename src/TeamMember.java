@@ -64,20 +64,16 @@ public class TeamMember
 	 System.out.println("Setting up the names....");
 	 String name1 = "Sam";//first team member name
 	 String name2 = "Kyle";//second team member name
-	 String name3 = "Diana";//third team member name
-	 String name4 = "Andrea";//fourth team member name
-	 String name5 = "Kevin";//fifth team member name
-	 String name6 = "Karla";//sixth team member name
-	 String name7 = "Karla";//seventh team member name
+	 String name3 = "Karla";//third team member name
+	 String name4 = "Karla";//fourth team member name
+	 String name5 = "Karla";//fifth team member name
 	 System.out.println("--------------------------------------");
 	 System.out.println("Setting up the startDates....");
 	 Date date1 = new Date("12/3/2009");//first team member date
 	 Date date2 = new Date("11/8/2010");//second team member date
 	 Date date3 = new Date("5/12/2029");//third team member date
-	 Date date4 = new Date("5/13/2029");//fourth team member date
-	 Date date5 = new Date("3/11/2015");//fifth team member date
-	 Date date6 = new Date("12/3/2009");//sixth team member date
-	 Date date7 = new Date("12/3/2009");//seventh team member date
+	 Date date4 = new Date("12/3/2009");//fourth team member date
+	 Date date5 = new Date("12/3/2009");//fifth team member date
 	 System.out.println("--------------------------------------");
 	 System.out.println("Constructing the TeamMembers....");
      TeamMember member1 = new TeamMember(name1,date1);//first team member
@@ -90,20 +86,14 @@ public class TeamMember
      System.out.println(member4.toString());
      TeamMember member5 = new TeamMember(name5,date5);//fifth team member
      System.out.println(member5.toString());
-     TeamMember member6 = new TeamMember(name6,date6);//sixth team member
-     System.out.println(member6.toString());
-     TeamMember member7 = new TeamMember(name7,date7);//sixth team member
-     System.out.println(member7.toString());
      System.out.println("--------------------------------------");
      System.out.println("Teasting the equals method....");
 	 if(member1.equals(member2)) System.out.println("member1 and member2 are equal.");
 	 else System.out.println("member1 and member2 aren't equal.");
 	 if(member3.equals(member4)) System.out.println("member3 and member4 are equal.");
 	 else System.out.println("member3 and member4 aren't equal.");
-	 if(member5.equals(member6)) System.out.println("member5 and member6 are equal.");
-	 else System.out.println("member5 and member6 aren't equal.");
-	 if(member6.equals(member7)) System.out.println("member6 and memeber7 are equal.");
-	 else System.out.println("memeber6 and memeber7 aren't equal.");
+	 if(member4.equals(member5)) System.out.println("member4 and member5 are equal.");
+	 else System.out.println("member4 and member5 aren't equal.");
      System.out.println("Ending the TeamMember Testbed....");
      System.out.println("--------------------------------------");
    }
